@@ -119,11 +119,11 @@ public class Register extends AppCompatActivity {
                                     }
 
                                     if (isCustomerRadio.isChecked()) {
-                                        startActivity(new Intent(getApplicationContext(), CustomerActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), Login.class));
                                         finish();
                                     }
                                     if (isVendorRadio.isChecked()) {
-                                        startActivity(new Intent(getApplicationContext(), VendorActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), Login.class));
                                         finish();
                                     }
                                 }

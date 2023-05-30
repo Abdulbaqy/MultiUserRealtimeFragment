@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text="Email"
+        android:text="Profile"
         android:textStyle="bold"
         android:textSize="24dp"
         />

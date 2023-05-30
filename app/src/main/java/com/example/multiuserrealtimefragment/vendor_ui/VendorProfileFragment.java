@@ -14,11 +14,14 @@ import androidx.fragment.app.Fragment;
 import com.example.multiuserrealtimefragment.Login;
 import com.example.multiuserrealtimefragment.R;
 import com.example.multiuserrealtimefragment.preferences;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class VendorProfileFragment extends Fragment {
 
     TextView vendorProfileName, vendorProfileEmail, vendorProfileNumber, vendorProfileAs;
     Button logout;
+    DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

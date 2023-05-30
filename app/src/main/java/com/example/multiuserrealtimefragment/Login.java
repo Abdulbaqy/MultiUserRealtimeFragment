@@ -113,8 +113,17 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        gotoRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Register.class));
+            }
+        });
 
     }
+
+
+
 
     @Override
     protected void onStart() {
