@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".customer_ui.CustomerHomeFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="This is Customer Dashboard"
+        android:textStyle="bold"
+        android:textSize="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SetupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:text="Set Up"
+        android:textSize="25dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/round_back_primary_15"
+        android:textColor="#FFFFFF"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/MaintenanceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:text="Maintenance"
+        android:textSize="25dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_back_primary_15"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Logout"
+        />
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".customer_ui.CustomerProfileFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Profile"
+        android:textStyle="bold"
+        android:textSize="36dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Name"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Profile"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Phone Number"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_customer_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Profile"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Email"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_customer_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Profile"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Login As"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_customer_as"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Email"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:text="Logout"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:background="@drawable/round_back_primary_15"
+        android:textColor="#FFFFFF"/>
+
+
+
+</LinearLayout>
