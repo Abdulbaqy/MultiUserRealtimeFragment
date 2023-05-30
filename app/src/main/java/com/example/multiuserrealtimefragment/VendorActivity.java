@@ -40,8 +40,6 @@ public class VendorActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_vendor);
 
-        Button logout = findViewById(R.id.logoutBtn);
-
         bottomNavigationView = findViewById(R.id.nav_view_vendor);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.containerVendor, vendorHomeFragment).commit();
@@ -64,16 +62,6 @@ public class VendorActivity extends AppCompatActivity {
                     return true;
                 }
                 return false;
-            }
-        });
-
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(VendorActivity.this, Login.class));
-                preferences.clearData(VendorActivity.this);
-                finish();
             }
         });
 

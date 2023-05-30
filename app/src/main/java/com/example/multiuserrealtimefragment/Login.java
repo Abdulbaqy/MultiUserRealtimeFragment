@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
-    EditText fullname, password, email;
+    EditText password, email;
     Button loginBtn, gotoRegister;
     Switch active;
     FirebaseAuth fAuth;

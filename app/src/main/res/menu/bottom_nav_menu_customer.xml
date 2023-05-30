@@ -8,17 +8,17 @@
 
     <item
         android:id="@+id/navigation_chat_customer"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/baseline_chat_24"
         android:title="Chat" />
 
     <item
         android:id="@+id/navigation_project_customer"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/baseline_work_24"
         android:title="Project" />
 
     <item
         android:id="@+id/navigation_profile_customer"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/baseline_person_24"
         android:title="Profile" />
 
 </menu>

@@ -36,7 +36,6 @@ public class CustomerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
 
-        Button logout = findViewById(R.id.logoutBtn);
 
         bottomNavigationView = findViewById(R.id.nav_view_customer);
 
@@ -64,14 +63,7 @@ public class CustomerActivity extends AppCompatActivity {
         });
 
 
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(CustomerActivity.this, Login.class));
-                preferences.clearData(CustomerActivity.this);
-                finish();
-            }
-        });
+
     }
 
 }

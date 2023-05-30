@@ -20,4 +20,5 @@ public class VendorHomeFragment extends Fragment {
 
         return root;
     }
+
 }

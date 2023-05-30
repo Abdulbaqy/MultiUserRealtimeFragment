@@ -12,31 +12,47 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import com.example.multiuserrealtimefragment.CustomerActivity;
+import com.example.multiuserrealtimefragment.Login;
 import com.example.multiuserrealtimefragment.R;
+import com.example.multiuserrealtimefragment.preferences;
 
 public class CustomerProfileFragment extends Fragment {
 
     TextView customerProfileName, customerProfileEmail, customerProfileNumber, customerProfileAs;
+    Button logout;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.customer_fragment_profile, container, false);
 
-        Button logoutBtn;
+        customerProfileName = root.findViewById(R.id.profile_customer_name);
+        customerProfileEmail = root.findViewById(R.id.profile_customer_email);
+        customerProfileNumber = root.findViewById(R.id.profile_customer_number);
+        customerProfileAs = root.findViewById(R.id.profile_customer_as);
+        logout = root.findViewById(R.id.logoutBtn);
+
 
         showUserData();
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Login.class);
+                startActivity(intent);
+
+                preferences.clearData(getActivity());
+
+                requireActivity().finish();
+            }
+        });
 
         return root;
     }
     public void showUserData(){
         Bundle bundle = getArguments();
         if (bundle != null) {
-            TextView customerProfileName = getView().findViewById(R.id.profile_customer_name);
-            TextView customerProfileEmail = getView().findViewById(R.id.profile_customer_email);
-            TextView customerProfileNumber = getView().findViewById(R.id.profile_customer_number);
-            TextView customerProfileAs = getView().findViewById(R.id.profile_customer_as);
-
             String nameUser = bundle.getString("FullName");
             String emailUser = bundle.getString("UserEmail");
             String numberUser = bundle.getString("PhoneNumber");
@@ -48,4 +64,6 @@ public class CustomerProfileFragment extends Fragment {
             customerProfileAs.setText(asUser);
         }
     }
+
+
 }

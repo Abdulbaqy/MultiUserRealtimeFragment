@@ -26,18 +26,6 @@
             android:layout_height="wrap_content"
             tools:listitem="@layout/card_vendor_setup" />
 
-        <Button
-            android:id="@+id/logoutBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:onClick="logoutBtn"
-            android:text="Button"
-            tools:ignore="OnClick" />
-
     </LinearLayout>
 
 </ScrollView>
