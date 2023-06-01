@@ -17,16 +17,28 @@ import com.example.multiuserrealtimefragment.CustomerActivity;
 import com.example.multiuserrealtimefragment.Login;
 import com.example.multiuserrealtimefragment.R;
 import com.example.multiuserrealtimefragment.preferences;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class CustomerProfileFragment extends Fragment {
 
     TextView customerProfileName, customerProfileEmail, customerProfileNumber, customerProfileAs;
     Button logout;
+//    coba ambil profile
+    FirebaseDatabase database;
+    FirebaseAuth auth;
+    String email, password, name, number, as;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.customer_fragment_profile, container, false);
 
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
         customerProfileName = root.findViewById(R.id.profile_customer_name);
         customerProfileEmail = root.findViewById(R.id.profile_customer_email);
         customerProfileNumber = root.findViewById(R.id.profile_customer_number);
@@ -35,6 +47,28 @@ public class CustomerProfileFragment extends Fragment {
 
 
         showUserData();
+
+        DatabaseReference reference = database.getReference().child("Users").child(auth.getUid());
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                name = snapshot.child("FullName").getValue().toString();
+                number = snapshot.child("PhoneNumber").getValue().toString();
+                email = snapshot.child("UserEmail").getValue().toString();
+                as = snapshot.child("as").getValue().toString();
+
+                customerProfileName.setText(name);
+                customerProfileNumber.setText(number);
+                customerProfileEmail.setText(email);
+                customerProfileAs.setText(as);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
