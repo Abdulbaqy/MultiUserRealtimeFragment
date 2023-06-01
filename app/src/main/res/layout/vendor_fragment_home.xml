@@ -15,13 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="This is Vendor Dashboard"
+            android:layout_marginTop="20dp"
+            android:text="Choose Your Project!"
             android:textStyle="bold"
             android:textSize="24dp"/>
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RV_ProjectVendor"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/card_vendor_setup" />
