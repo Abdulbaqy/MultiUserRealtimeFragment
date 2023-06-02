@@ -5,101 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".vendor_ui.VendorProfileFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="20dp"
         android:text="Profile"
         android:textStyle="bold"
         android:textSize="36dp"
         />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="Name"
-        android:textStyle="normal"
-        android:textSize="20dp"
-        />
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
-    <TextView
-        android:id="@+id/profile_vendor_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="Profile"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Name"
+            android:textStyle="normal"
+            android:textSize="20dp"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Phone Number"
-        android:textStyle="normal"
-        android:textSize="20dp"
-        />
+        <TextView
+            android:id="@+id/profile_vendor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
 
-    <TextView
-        android:id="@+id/profile_vendor_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="Profile"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Phone Number"
+            android:textStyle="normal"
+            android:textSize="20dp"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Email"
-        android:textStyle="normal"
-        android:textSize="20dp"
-        />
+        <TextView
+            android:id="@+id/profile_vendor_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
 
-    <TextView
-        android:id="@+id/profile_vendor_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="Profile"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Email"
+            android:textStyle="normal"
+            android:textSize="20dp"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Login As"
-        android:textStyle="normal"
-        android:textSize="20dp"
-        />
+        <TextView
+            android:id="@+id/profile_vendor_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
 
-    <TextView
-        android:id="@+id/profile_vendor_as"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="Profile"
-        android:textStyle="bold"
-        android:textSize="24dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Login As"
+            android:textStyle="normal"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/profile_vendor_as"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Profile"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
+
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/logoutBtn"
